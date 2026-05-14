@@ -1,5 +1,12 @@
+import Image from "next/image";
+
 const DOWNLOAD_URL =
   "https://appdistribution.firebase.dev/i/0b4faf8fffe7a674";
+
+const CLIENT_LOGO = {
+  src: "/OnEngenharia.webp",
+  alt: "On Engenharia",
+} as const;
 
 function DownloadIcon({ className }: { className?: string }) {
   return (
@@ -51,8 +58,15 @@ export default function Home() {
 
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <header className="animate-landing-in mb-12 flex flex-col items-center gap-3 text-center sm:mb-16">
-          <div className="rounded-xl border border-white/10 bg-white/5 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-gray-300 shadow-lg shadow-black/20 backdrop-blur-md">
-            LOGO CLIENTE
+          <div className="rounded-xl border border-white/10 bg-white/5 px-6 py-4 shadow-lg shadow-black/20 backdrop-blur-md sm:px-8 sm:py-5">
+            <Image
+              src={CLIENT_LOGO.src}
+              alt={CLIENT_LOGO.alt}
+              width={280}
+              height={96}
+              className="h-11 w-auto max-w-[min(100%,260px)] object-contain object-center sm:h-14 sm:max-w-[min(100%,300px)]"
+              priority
+            />
           </div>
           <h1 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
             Nome do Aplicativo
