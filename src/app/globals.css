@@ -36,4 +36,9 @@
   .animation-delay-500 {
     animation-delay: 0.4s;
   }
+
+  /* Painel: #f8fafc — equivalente escuro para superfícies */
+  .surface-glass {
+    @apply rounded-xl border border-white/10 bg-slate-950/50 shadow-lg shadow-black/25 backdrop-blur-md;
+  }
 }

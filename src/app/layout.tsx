@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Nome do Aplicativo — Download oficial",
+  title: "Andamento de Obra — Download do app Android",
   description:
-    "Baixe a versão oficial do aplicativo para Android de forma rápida e segura.",
+    "Cronograma, marcos e acompanhamento em campo. Baixe o APK oficial para Android.",
 };
 
 export default function RootLayout({
@@ -26,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-dvh bg-gray-950 font-sans antialiased text-gray-100`}
+        className={`${inter.className} min-h-dvh bg-slate-950 antialiased text-slate-100`}
       >
         {children}
       </body>
