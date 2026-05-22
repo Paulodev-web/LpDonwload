@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const DOWNLOAD_URL =
-  "https://appdistribution.firebase.dev/i/9df5685d344998a0";
+  "https://appdistribution.firebase.dev/i/9b27c39c33fe1520";
 
 const CLIENT_LOGO = {
   src: "/OnEngenharia.webp",
